@@ -1,0 +1,96 @@
+.sider {
+  position: fixed;
+  height: calc(100vh - 56px);
+  top: 56px;
+  z-index: 1;
+  :global {
+    .ant-menu-inline .ant-menu-item,
+    .ant-menu-inline .ant-menu-submenu-title {
+      margin: 8px auto;
+      padding: 0 16px 0 20px;
+    }
+    .ant-menu-item .ant-menu-item-icon,
+    .ant-menu-submenu-title .ant-menu-item-icon,
+    .ant-menu-item .anticon,
+    .ant-menu-submenu-title .anticon {
+      margin-right: 8px;
+    }
+    .ant-menu-inline-collapsed {
+      width: 60px;
+    }
+  }
+}
+
+.headerMenu {
+  background-color: #243351 !important;
+  height: 100%;
+  border-bottom: none;
+  line-height: 1 !important;
+  :global {
+    .ant-menu {
+      &-item,
+      &-submenu {
+        height: 100%;
+        box-sizing: border-box;
+        padding: 0 !important;
+        margin: 0 !important;
+        border-bottom: none !important;
+        top: 0 !important;
+        & span {
+          color: #808ca3;
+        }
+      }
+    }
+    .ant-menu-item.ant-menu-item-active,
+    .ant-menu-item.ant-menu-item-selected,
+    .ant-menu-submenu.ant-menu-submenu-active,
+    .ant-menu-submenu.ant-menu-submenu-selected {
+      color: #fff;
+      & span {
+        color: #fff;
+      }
+    }
+    .ant-menu-item > a:only-child {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .ant-menu-submenu-title {
+      height: 100%;
+      & > span {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      a {
+        display: flex;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    .ant-menu-item .anticon,
+    .ant-menu-submenu-title .anticon {
+      margin-right: 0;
+      margin-bottom: 8px;
+    }
+  }
+}
+.activeMenu {
+  background-color: #335481;
+  &:hover {
+    background-color: #335481;
+  }
+  :global {
+    .ant-menu-submenu-title > a {
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "private": true,
+  "name": "my-project",
+  "version": "1.0.0",
+  "description": "{{projectDescription}}",
+  "scripts": {
+    "start": "umi dev",
+    "build": "umi build",
+    "lint:script": "eslint --fix \"src/**/*.ts\" \"src/**/*.tsx\"",
+    "lint:style": "stylelint --fix \"src/**/*.css\" \"src/**/*.less\"",
+    "lint": "yarn lint:script && yarn lint:style",
+    "submit": "svn del dist/* && echo 打包构建中... && umi build && svn add dist/* && svn ci -m 'util:html: submit-compiling' dist && echo 打包构建完毕"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.3.0",
+    "antd": "^4.9.1",
+    "classnames": "^2.2.6",
+    "dva": "^2.6.0-beta.20",
+    "echarts": "^5.0.2",
+    "echarts-for-react": "^3.0.1",
+    "isomorphic-fetch": "^2.2.1",
+    "md5": "^2.3.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "stylelint-less": "^1.0.1"
+  },
+  "devDependencies": {
+    "@svgr/webpack": "^5.3.1",
+    "@types/classnames": "^2.2.10",
+    "@types/echarts": "^4.9.6",
+    "@types/md5": "^2.2.1",
+    "@types/qs": "^6.9.7",
+    "@types/react": "^16.9.32",
+    "@typescript-eslint/eslint-plugin": "^4.30.0",
+    "@typescript-eslint/parser": "^4.30.0",
+    "@umijs/preset-react": "^1.4.10",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-alloy": "^4.3.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-react": "^7.25.1",
+    "prettier": "^2.2.1",
+    "stylelint": "^13.13.1",
+    "stylelint-config-prettier": "^8.0.1",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-recommended": "^5.0.0",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-prettier": "^1.1.2",
+    "typescript": "^3.9.7",
+    "umi": "^3.2.24"
+  },
+  "engines": {
+    "node": ">=10.13.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
